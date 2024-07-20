@@ -44,3 +44,40 @@ divas, to showcase their style and gain recognition and be see within the commun
 <br>
 
 <img width="800" alt="wireframe" src="assets/wireframes.png">
+<br>
+<br>
+
+### **figma `animation`:**
+
+<br>
+
+User walkthorough and interface for fashionmatch
+
+[link](https:..)
+
+<br>
+
+### **fashionmatch `setup`:**
+
+<br>
+
+```
+
+```
+
+### **`tech` stack**
+
+<br>
+
+<img width="175" alt="wireframe" src="assets/next.jpg"/>&nbsp;&nbsp;&nbsp;
+<img width="250" alt="wireframe" src="assets/soliditylogo.png"/>
+
+<br>
+
+### **next `steps`**
+
+<br>
+
+- continue building up the front-end
+- complete the authorisation and authentication of user signup/login
+- allow users to submit, signup and login
