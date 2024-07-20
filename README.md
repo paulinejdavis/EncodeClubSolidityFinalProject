@@ -53,7 +53,7 @@ divas, to showcase their style and gain recognition and be see within the commun
 
 User walkthorough and interface for fashionmatch
 
-[link](https:..)
+[link](https://www.figma.com/design/ECGuCCqogKf0cOHW5pxZhx/FashionMatch?node-id=0-1&t=5QjLDEMYXSOCHo5E-0)
 
 <br>
 
@@ -62,7 +62,14 @@ User walkthorough and interface for fashionmatch
 <br>
 
 ```
+git clone https://github.com/paulinejdavis/EncodeClubSolidityFinalProject.git
+npm install
+nvm use 18.17.0
+npx hardhat compile
+npm run dev
 
+npm run build
+npm start
 ```
 
 ### **`tech` stack**
