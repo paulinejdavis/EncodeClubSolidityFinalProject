@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Web3 from "web3";
 import FashionVoting from "../build/contracts/FashionVoting.json";
+import Image from "next/image";
 
 const Home = () => {
   const [web3, setWeb3] = useState(null);
@@ -58,8 +59,30 @@ const Home = () => {
   }, [contract]);
 
   return (
-    <div>
-      <h1>Fashion Match</h1>
+    <div className="container">
+      <header className="header">
+        <Image
+          src="/assets/fashionMatchLogo.png"
+          alt="Fashion Match Logo"
+          width={400}
+          height={50}
+        />
+        {/* <h1>Fashion Match</h1> */}
+        <p>Rate bitches outfits</p>
+      </header>
+      <div className="image-container">
+        <Image
+          src="/assets/landingImage.png"
+          alt="Fashion Match Landing"
+          layout="responsive"
+          width={800}
+          height={600}
+        />
+      </div>
+      <div className="footer">
+        <button onClick={loadFashionLooks}>Get voting →</button>
+      </div>
+      <div className="voting-section"></div>
       <input
         type="text"
         value={imageUrl}
@@ -67,9 +90,9 @@ const Home = () => {
         placeholder="Image URL"
       />
       <button onClick={addFashionLook}>Submit Fashion Look</button>
-      <div>
+      <div className="fashion-looks">
         {fashionLooks.map((look, index) => (
-          <div key={index}>
+          <div key={index} className="fashion-looks">
             <img
               src={look.imageUrl}
               alt={`Fashion Look ${index}`}
