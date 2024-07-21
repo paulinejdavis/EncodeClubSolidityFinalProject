@@ -86,5 +86,12 @@ npm start
 <br>
 
 - continue building up the front-end
-- complete the authorisation and authentication of user signup/login
+- complete the authorisation, authentication and profiles of user signup/login
 - allow users to submit, signup and login
+- store submitted photos using IPFS(Interplanetary File System)
+- add comments and feedback functionality
+- create a leaderboard
+- advanced serach and filtering functionality
+- ensure mobile responsiveness and dark/light mode
+- integrate with social media
+- analytics and insights
