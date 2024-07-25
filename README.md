@@ -20,7 +20,7 @@ https://github.com/orgs/Encode-Club-Solidity-Bootcamp/repositories
 <br>
 
 **FashionMatch** is a decenteralised application designed to engage users in the fashion space to share and interact.
-Users can submit potofs of their fashion looks, which are then displayed for the community to view and vote on.
+Users can submit photos of their fashion looks, which are then displayed for the community to view and vote on.
 The application uses smart contracts to ensure transparent and secure voting, where each votes contributes to the overall
 fashion entries.
 
