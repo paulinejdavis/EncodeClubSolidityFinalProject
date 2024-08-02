@@ -1,4 +1,5 @@
 // pages/index.js
+import Styles from "./index-style.module.css";
 import { useState, useEffect } from "react";
 import Web3 from "web3";
 import FashionVoting from "../build/contracts/FashionVoting.json";
@@ -59,8 +60,8 @@ const Home = () => {
   }, [contract]);
 
   return (
-    <div className="container">
-      <header className="header">
+    <div className={Styles.container}>
+      <header className={Styles.header}>
         <Image
           src="/assets/fashionMatchLogo.png"
           alt="Fashion Match Logo"
@@ -68,40 +69,44 @@ const Home = () => {
           height={50}
         />
         {/* <h1>Fashion Match</h1> */}
-        <p>Rate bitches outfits</p>
+        <p>Rate badass outfits</p>
       </header>
-      <div className="image-container">
-        <Image
-          src="/assets/landingImage.png"
-          alt="Fashion Match Landing"
-          layout="responsive"
-          width={800}
-          height={600}
+
+      <div className={Styles.section}>
+        <div className={Styles["image-container"]}>
+          <Image
+            src="/assets/landingImage.png"
+            alt="Fashion Match Landing"
+            layout="responsive"
+            width={800}
+            height={600}
+          />
+        </div>
+
+        <div className={Styles["voting-section"]}></div>
+        <input
+          type="text"
+          value={imageUrl}
+          onChange={(e) => setImageUrl(e.target.value)}
+          placeholder="Image URL"
         />
+        <button onClick={addFashionLook}>Submit Fashion Look</button>
+        <div className={Styles["fashion-looks"]}>
+          {fashionLooks.map((look, index) => (
+            <div key={index} className={Styles["fashion-looks"]}>
+              <img
+                src={look.imageUrl}
+                alt={`Fashion Look ${index}`}
+                width="100"
+              />
+              <p>Votes: {look.voteCount}</p>
+              <button onClick={() => voteFashionLook(index + 1)}>Vote</button>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="footer">
+      <div className={Styles.footer}>
         <button onClick={loadFashionLooks}>Get voting →</button>
-      </div>
-      <div className="voting-section"></div>
-      <input
-        type="text"
-        value={imageUrl}
-        onChange={(e) => setImageUrl(e.target.value)}
-        placeholder="Image URL"
-      />
-      <button onClick={addFashionLook}>Submit Fashion Look</button>
-      <div className="fashion-looks">
-        {fashionLooks.map((look, index) => (
-          <div key={index} className="fashion-looks">
-            <img
-              src={look.imageUrl}
-              alt={`Fashion Look ${index}`}
-              width="100"
-            />
-            <p>Votes: {look.voteCount}</p>
-            <button onClick={() => voteFashionLook(index + 1)}>Vote</button>
-          </div>
-        ))}
       </div>
     </div>
   );
